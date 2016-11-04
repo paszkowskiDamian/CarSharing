@@ -42,13 +42,22 @@ import { AppState } from './app.service';
       <!--</span>-->
     <!--</nav>-->
     <div class="container">
-      <nav class="nav nav-inline">
-        <img src="./assets/images/logo-100px.png" id="logo">
-        <div class="userPanel">
-           <h3>Imię Nazwisko</h3>
-           <small>edytuj</small>
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="./assets/images/logo-100px.png" id="logo">
         </div>
-      </nav>
+        <div class="col-sm-6 userPanel">
+          <div id="userImage">
+            
+          </div>
+          <div class="userName">
+            <h4>Imię Nazwisko</h4>
+           <small><a [routerLink]="['./edit']" >Edytuj</a></small>
+          </div>
+         
+        </div>
+    </div>
+      
     </div>
     <main>
       <router-outlet></router-outlet>

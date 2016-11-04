@@ -1,3 +1,57 @@
+@media (max-width: 600px) {
+  #logo {
+    box-sizing: content-box;
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+}
+body {
+  background-color: rgba(244, 244, 244, 1);
+}
+
+h4 {
+  font-size: 1.2em;
+
+}
+
 #logo {
-  height: 200px;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 100px;
+  width: auto;
+}
+
+#userImage {
+  background-color: #3e82ff;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.userPanel {
+  margin-top: 5px;
+}
+
+.userPanel > * {
+  display: inline-block;
+  float: right;
+}
+
+.userPanel :last-child:after {
+  clear: both;
+}
+
+.userName {
+  margin-top: 30px;
+  margin-right: 15px;
+}
+
+.userName > * {
+  margin-bottom: 0;
+}
+
+.userName > small {
+  float: right;
 }

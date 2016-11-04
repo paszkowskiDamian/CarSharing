@@ -10,6 +10,7 @@ export const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
   { path: 'home',  component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  {path: 'edit',   component: EditComponent},
   {
     path: 'detail', loadChildren: () => System.import('./+detail').then((comp: any) => {
       return comp.default;
