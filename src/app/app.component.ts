@@ -16,32 +16,40 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    <nav>
-      <span>
-        <a [routerLink]=" ['./'] ">
-          Index
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./home'] ">
-          Home
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./detail'] ">
-          Detail
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./about'] ">
-          About
-        </a>
-      </span>
-    </nav>
-
+    <!--<nav>-->
+      <!--<span>-->
+        <!--<a [routerLink]=" ['./'] ">-->
+          <!--Index-->
+        <!--</a>-->
+      <!--</span>-->
+      <!--|-->
+      <!--<span>-->
+        <!--<a [routerLink]=" ['./home'] ">-->
+          <!--Home-->
+        <!--</a>-->
+      <!--</span>-->
+      <!--|-->
+      <!--<span>-->
+        <!--<a [routerLink]=" ['./detail'] ">-->
+          <!--Detail-->
+        <!--</a>-->
+      <!--</span>-->
+      <!--|-->
+      <!--<span>-->
+        <!--<a [routerLink]=" ['./about'] ">-->
+          <!--About-->
+        <!--</a>-->
+      <!--</span>-->
+    <!--</nav>-->
+    <div class="container">
+      <nav class="nav nav-inline">
+        <img src="./assets/images/logo-100px.png" id="logo">
+        <div class="userPanel">
+           <h3>Imię Nazwisko</h3>
+           <small>edytuj</small>
+        </div>
+      </nav>
+    </div>
     <main>
       <router-outlet></router-outlet>
     </main>
