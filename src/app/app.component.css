@@ -6,3 +6,7 @@ html, body{
 span.active {
   background-color: gray;
 }
+
+.sebm-google-map-container {
+  height: 200px;
+}

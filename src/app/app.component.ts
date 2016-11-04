@@ -2,7 +2,7 @@
  * Angular 2 decorators and services
  */
 import { Component, ViewEncapsulation } from '@angular/core';
-
+import { NewsComponent } from './news';
 import { AppState } from './app.service';
 
 /*
@@ -59,9 +59,11 @@ import { AppState } from './app.service';
     </div>
       
     </div>
+    <news></news>
     <main>
       <router-outlet></router-outlet>
     </main>
+
 
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
 
