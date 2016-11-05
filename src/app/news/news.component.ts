@@ -32,7 +32,8 @@ export class NewsComponent {
   destAddress = "Biuro Gliwice Sośnica";
   weekDay = "pon";
   date= "2016/10/07";
-  time =  "8:30";
+  srcTime =  "7:45";
+  dstTime = "8:30";
   constructor(public route: ActivatedRoute) {
 
   }
