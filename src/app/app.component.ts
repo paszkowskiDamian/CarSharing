@@ -59,7 +59,7 @@ import { AppState } from './app.service';
     </div>
       
     </div>
-    <news></news>
+    
     <main>
       <router-outlet></router-outlet>
     </main>
