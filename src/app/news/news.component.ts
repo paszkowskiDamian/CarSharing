@@ -26,6 +26,12 @@ export class NewsComponent {
   lat: number = 51.678418;
   lng: number = 7.809007;
 
+
+  startAddress = "Katowice al. Korfantego 2";
+  destAddress = "Biuro Gliwice Sośnica";
+  weekDay = "pon";
+  date= "2016/10/07";
+  time =  "8:30";
   constructor(public route: ActivatedRoute) {
 
   }
