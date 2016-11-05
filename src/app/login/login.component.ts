@@ -43,12 +43,17 @@ console.log('login` component loaded asynchronously');
     
     <div class="form-group row">
       <div class="offset-xs-2 col-xs-2 ">
-        <button type="button" class="btn btn-primary " (click)="getLogin()">Login</button>
+        <button type="button" class="btn btn-primary " (click)="Logg()">Login</button>
       </div>
       <div class=" col-xs-8 ">
         <button type="button" style="float: right" class="btn btn-primary" (click)="registerAccountPage()">Załóż konto</button>
       </div>
     </div>
+    <div class="row">
+    <div class="alert alert-danger" id="ups" style="display: none" role="alert">
+  <strong>Ups!</strong> Coś poszło nie tak ...
+</div>
+</div>
   </form>
 </div>
     
@@ -58,9 +63,13 @@ console.log('login` component loaded asynchronously');
   providers: [HttpService, registerModel]
 })
 export class LoginComponent {
-  localState: any;
-  constructor(public route: ActivatedRoute, private _http : HttpService, private _router : Router, public userInfo : registerModel, public storage : Locker) {
+  constructor(public route: ActivatedRoute, private _http : HttpService, private _router : Router, public userInfo : registerModel,
+              public storage : Locker) {
 
+  }
+
+  Logg(){
+    this._router.navigate(['/home']);
   }
 
   registerAccountPage(){
@@ -75,8 +84,11 @@ export class LoginComponent {
        //this._router.navigate(['/home'])
        var name = response.firstName;
        console.log(name);
-       this.storage.set('firstName',name);
-     }
+       document.getElementById('ups').style.display = "hidden";
+     },function () {
+       console.log("error occured");
+       document.getElementById('ups').style.display = "block";
+     })
    }
 
   ngOnInit() {
@@ -104,6 +116,7 @@ export class LoginComponent {
         .then(json => {
           console.log('async mockData', json);
           this.localState = json;
+
         });
 
     });

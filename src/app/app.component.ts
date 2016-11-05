@@ -16,7 +16,6 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    
     <nav class="container">
       <div class="row">
         <div class="col-sm-6">
@@ -24,11 +23,14 @@ import { AppState } from './app.service';
         </div>
         <div *ngIf="isLoggedIn === true" class="col-sm-6 userPanel">
           <div id="userImage">
-            
+            <div id="badge"><p>+1</p></div>
           </div>
           <div class="userName">
-            <h4>Imię Nazwisko</h4>
-           <small><a [routerLink]="['./edit']" >Edytuj</a></small>
+            <h4 id="firstLastName">Jakub Jodłowski</h4>
+           
+           <small><a [routerLink]="['./login']" >  Wyloguj</a></small>
+           <small style="margin-right: 10px"><a [routerLink]="['./edit']" >Edytuj  </a></small>
+           
           </div>
          
         </div>
@@ -57,7 +59,6 @@ export class AppComponent {
   angularclassLogo = 'assets/icon/ms-icon-310x310.png';
   name = 'Angular 2 Webpack Starter';
   url = 'https://twitter.com/AngularClass';
-
   isLoggedIn = true;
 
   constructor(

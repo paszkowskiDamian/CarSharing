@@ -6,7 +6,16 @@
     margin-left: 25%;
   }
 
+#firstLastName>* {
+  display: inline-block;
+}
 
+
+
+
+#firstLastName>*:after {
+  clear: both;
+}
 
   #buttons > * {
     height: 60px;
@@ -16,6 +25,39 @@
   #buttons > *:hover {
     background-color: rgba(167, 190, 255, 1);
   }
+}
+
+#badge {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #00cc66;
+  position: relative;
+  top: -7px;
+  right: -40px;
+  overflow: visible;
+  font-size: 0.7rem;
+  z-index: 10;
+  transition: 0.5s;
+  color: #ffffff;
+
+}
+
+#badge>*{
+  padding-top: 4px;
+  padding-left: 1px;
+  horiz-align: center;
+  vertical-align: center;
+  font-size: 0.8rem;
+  width: 10px;
+  margin: auto;
+}
+
+#badge:hover {
+  font-size: 1rem;
+  width: 35px;
+  height: 35px;
+  transition: 0.5s;
 }
 
 #buttons {
