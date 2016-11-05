@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpService } from  'app/http.service';
 /*
  * We're loading this component asynchronously
  * We are using some magic with es6-promise-loader that will wrap the module with a Promise
@@ -20,13 +21,13 @@ console.log('register` component loaded asynchronously');
     <div class="form-group row">
       <label for="login" class="col-sm-2 col-form-label">Login</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="login" placeholder="Podaj swój login">
+        <input type="text" class="form-control" name="login" id="login" placeholder="Podaj swój login">
       </div>
     </div>
     <div class="form-group row">
-      <label for="password" class="col-sm-2 col-form-label">Password</label>
+      <label for="password" class="col-sm-2 col-form-label" >Password</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="login" placeholder="Podaj hasło">
+        <input type="password" class="form-control" name="password" id="login" placeholder="Podaj hasło">
       </div>
     </div>
       <div class="form-group row">
@@ -38,10 +39,10 @@ console.log('register` component loaded asynchronously');
     
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-1 ">
-        <button type="submit" class="btn btn-primary ">Login</button>
+        <button type="button" class="btn btn-primary ">Login</button>
       </div>
       <div class=" col-sm-1 ">
-        <button type="submit" class="btn btn-primary ">Załóż konto</button>
+        <button type="button" class="btn btn-primary ">Załóż konto</button>
       </div>
     </div>
   </form>
@@ -49,14 +50,17 @@ console.log('register` component loaded asynchronously');
     
     
     
-  `
+  `,
+  providers: [HttpService]
 })
 export class RegisterComponent {
   localState: any;
-  constructor(public route: ActivatedRoute) {
+  constructor(public route: ActivatedRoute, private _http : HttpService) {
 
   }
 
+  
+  
   ngOnInit() {
     this.route
       .data

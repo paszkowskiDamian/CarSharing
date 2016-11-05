@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import {  HttpService } from ''
+import {ActivatedRoute, Router} from '@angular/router';
+import { HttpService } from  'app/http.service'
 
 /*
  * We're loading this component asynchronously
@@ -39,11 +39,11 @@ console.log('login` component loaded asynchronously');
 </div>
     
     <div class="form-group row">
-      <div class="offset-sm-2 col-sm-1 ">
+      <div class="offset-sm-2 col-xs-2 ">
         <button type="button" class="btn btn-primary " (click)="getLogin()">Login</button>
       </div>
-      <div class=" col-sm-1 ">
-        <button type="button" class="btn btn-primary ">Załóż konto</button>
+      <div class=" col-xs-1 ">
+        <button type="button" class="btn btn-primary" (click)="registerAccountPage()">Załóż konto</button>
       </div>
     </div>
   </form>
@@ -51,20 +51,25 @@ console.log('login` component loaded asynchronously');
     
     
     
-  `
+  `,
+  providers: [HttpService]
 })
 export class LoginComponent {
   localState: any;
-  constructor(public route: ActivatedRoute) {
+  constructor(public route: ActivatedRoute, private _http : HttpService, private _router : Router) {
 
+  }
+
+  registerAccountPage(){
+    this._router.navigate(['/register']);
   }
 
   model : loginModel = new loginModel();
 
-  getLogin() {
-    console.log(this.model.userName);
-    console.log(this.model.password);
-  }
+
+   getLogin() {
+     console.log(this._http.post("http://carshareapp.azurewebsites.net/api/user/login",this.model));
+   }
 
   ngOnInit() {
     this.route

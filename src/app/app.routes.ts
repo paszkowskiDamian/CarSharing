@@ -7,12 +7,12 @@ import {EditComponent} from './edit'
 import {AddComponent} from './add'
 import {LoginComponent} from "./login";
 import { DataResolver } from './app.resolver';
-import {RegisterComponent} from "./register/register.component";
+import {RegisterComponent} from "./register";
 
 
 
 export const ROUTES: Routes = [
-  { path: '',      component: LoginComponent },
+  { path: '',      component: HomeComponent },
    { path: 'home', redirectTo: '/', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   {path: 'edit',   component: EditComponent},
