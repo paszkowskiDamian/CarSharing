@@ -56,8 +56,14 @@ nav {
 
 .searchBtn {
   box-sizing: border-box;
-  padding-top: 12px;
+  padding-top: 10px;
   text-align: center;
+  background-color: #3e82ff;
+}
+
+.searchBtn > * {
+  color: #434345;
+  padding-bottom: 5px;
 }
 
 .userPanel {
