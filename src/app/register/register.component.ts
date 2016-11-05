@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { HttpService } from  'app/http.service';
 /*
  * We're loading this component asynchronously
@@ -24,25 +24,55 @@ console.log('register` component loaded asynchronously');
         <input type="text" class="form-control" name="login" id="login" placeholder="Podaj swój login">
       </div>
     </div>
-    <div class="form-group row">
-      <label for="password" class="col-sm-2 col-form-label" >Password</label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" name="password" id="login" placeholder="Podaj hasło">
-      </div>
-    </div>
-      <div class="form-group row">
-      <label for="keeplogin" class="col-sm-2 col-form-label">Zapamiętaj</label>
-      <div class="col-sm-1">
-      <input type="checkbox" class="form-control keep" id="keeplogin" placeholder="keep">
-</div>
-</div>
     
     <div class="form-group row">
-      <div class="offset-sm-2 col-sm-1 ">
-        <button type="button" class="btn btn-primary ">Login</button>
+      <label for="firstName" class="col-sm-2 col-form-label" >Imię</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Podaj swoje imię">
       </div>
-      <div class=" col-sm-1 ">
+    </div>
+    
+    <div class="form-group row">
+      <label for="lastName" class="col-sm-2 col-form-label" >Nazwisko</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Podaj swoje nazwisko">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="email" class="col-sm-2 col-form-label" >Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Podaj swój emial">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="phoneNumber" class="col-sm-2 col-form-label" >Numer Telefonu</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Podaj swój numer telefonu">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="password" class="col-sm-2 col-form-label" >Hasło</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" name="password" id="password" placeholder="Podaj hasło">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="passwordVeryfication" class="col-sm-2 col-form-label" >Powtórz hasło</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" name="passwordVeryfication" id="passwordVeryfication" placeholder="Zweryfikuj swoje hasło">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <div class="offset-xs-2 col-xs-2 ">
         <button type="button" class="btn btn-primary ">Załóż konto</button>
+      </div>
+      <div class=" col-xs-1 ">
+        <button type="button" class="btn btn-primary " (click)="loginUserPage()">Login</button>
       </div>
     </div>
   </form>
@@ -55,12 +85,13 @@ console.log('register` component loaded asynchronously');
 })
 export class RegisterComponent {
   localState: any;
-  constructor(public route: ActivatedRoute, private _http : HttpService) {
-
+  constructor(public route: ActivatedRoute, private _http : HttpService, private _router : Router){
   }
 
-  
-  
+  loginUserPage() {
+    this._router.navigate([('/login')]);
+  }
+
   ngOnInit() {
     this.route
       .data
@@ -91,4 +122,13 @@ export class RegisterComponent {
     });
   }
 
+}
+
+export class registerModel {
+  userName : string;
+  firstName : string;
+  lastName : string;
+  password : string;
+  email: string;
+  phoneNumber: string;
 }

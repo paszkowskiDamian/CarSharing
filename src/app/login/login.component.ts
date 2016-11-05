@@ -39,7 +39,7 @@ console.log('login` component loaded asynchronously');
 </div>
     
     <div class="form-group row">
-      <div class="offset-sm-2 col-xs-2 ">
+      <div class="offset-xs-2 col-xs-2 ">
         <button type="button" class="btn btn-primary " (click)="getLogin()">Login</button>
       </div>
       <div class=" col-xs-1 ">
@@ -104,6 +104,6 @@ export class LoginComponent {
 }
 
 export class loginModel {
-  userName : String;
-  password : String;
+  userName : string;
+  password : string;
 }
