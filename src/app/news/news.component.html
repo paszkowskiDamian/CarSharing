@@ -6,10 +6,11 @@
     <!--Tu komponent uzytkownika i szczegoly trasy-->
     <!--</div>-->
   <!--</div>-->
-  <div class="card">
+  <div class="card col-md-6">
   
-      <sebm-google-map [latitude]="lat" [longitude]="lng">
-            <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+      <sebm-google-map [latitude]="50.261665" [longitude]="19.021583" [zoom]="9" >
+            <sebm-google-map-marker [latitude]="50.261665" [longitude]="19.021583"></sebm-google-map-marker>
+            <sebm-google-map-marker [latitude]="50.290806" [longitude]="18.704975"></sebm-google-map-marker>
       </sebm-google-map>
 
   <div class="card-block">
@@ -17,10 +18,22 @@
             
           </div>
           <div class="userName">
-            <h4>Imię Nazwisko</h4>
+            <p>Imię Nazwisko</p>
+            
+  </div>
+
+  <div class="card-block">
+          
+            <p>Katowice al. Korfantego 2 => Biuro Gliwice Sośnica</p>
+            <h4>Czas przyjazdu</h4>
+            <p>pon 2016/10/07 8:30</p>
+            <h4>Punkty pośrednie</h4>
+            <ul>
+                <li>Ruda Śląska Opolska 14</li>
+                <li>Gliwice Częstochowska 21</li>
+            </ul>
           </div>
-    
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Kontakt</a>
+    <a href="#" class="btn btn-primary">Shotgun</a>
   </div>
 </div>
