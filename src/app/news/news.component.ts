@@ -27,7 +27,8 @@ console.log('`News` component loaded asynchronously');
     <!--Tu komponent uzytkownika i szczegoly trasy-->
     <!--</div>-->
   <!--</div>-->
-  <div class="card">
+  
+  <div class="card col-md-4">
   <img class="card-img-top" src="..." alt="Card image cap">
   <div class="card-block">
     <h4 class="card-title">Card title</h4>
