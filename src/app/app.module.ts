@@ -21,6 +21,7 @@ import {AddComponent} from './add';
 import {LoginComponent} from './login';
 import {RegisterComponent} from './register'; 
 import { NewsComponent }  from './news';
+import { TopDriverComponent } from './top-driver';
 import {EditComponent} from './edit';
 import { NoContentComponent } from './no-content';
 import { XLarge } from './home/x-large';
@@ -55,6 +56,7 @@ type StoreType = {
     AddComponent,
     SearchComponent,
     NewsComponent,
+    TopDriverComponent,
     NoContentComponent,
     XLarge
   ],

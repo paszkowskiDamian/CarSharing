@@ -54,7 +54,7 @@ import { AppState } from './app.service';
   `
 })
 export class AppComponent {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
+  angularclassLogo = 'assets/icon/ms-icon-310x310.png';
   name = 'Angular 2 Webpack Starter';
   url = 'https://twitter.com/AngularClass';
 
