@@ -23,10 +23,11 @@ console.log('`News` component loaded asynchronously');
 })
 export class NewsComponent {
   localState: any;
-  lat: number = 51.678418;
-  lng: number = 7.809007;
 
-
+  srcLat = 50.261665;
+  srcLng = 19.021583;
+  dstLat = 50.290806;
+  dstLng = 18.704975;
   startAddress = "Katowice al. Korfantego 2";
   destAddress = "Biuro Gliwice Sośnica";
   weekDay = "pon";
