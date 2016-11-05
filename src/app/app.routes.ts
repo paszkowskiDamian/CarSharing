@@ -7,6 +7,7 @@ import {EditComponent} from './edit'
 import {AddComponent} from './add'
 import {LoginComponent} from "./login";
 import { DataResolver } from './app.resolver';
+import {RegisterComponent} from "./register";
 
 
 
@@ -16,6 +17,7 @@ export const ROUTES: Routes = [
   { path: 'about', component: AboutComponent },
   {path: 'edit',   component: EditComponent},
   {path: 'add',     component: AddComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'login',   component: LoginComponent},
   {path: 'search', component: SearchComponent},
   {
