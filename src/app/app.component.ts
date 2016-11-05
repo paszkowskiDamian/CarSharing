@@ -41,7 +41,7 @@ import { AppState } from './app.service';
         <!--</a>-->
       <!--</span>-->
     <!--</nav>-->
-    <div class="container">
+    <nav class="container">
       <div class="row">
         <div class="col-sm-6">
           <a [routerLink]="['./home']"><img src="./assets/images/logo-100px.png" id="logo"></a>
@@ -58,7 +58,7 @@ import { AppState } from './app.service';
         </div>
     </div>
       
-    </div>
+    </nav>
     
     <main>
       <router-outlet></router-outlet>

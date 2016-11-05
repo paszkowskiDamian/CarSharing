@@ -9,24 +9,24 @@ import { ActivatedRoute } from '@angular/router';
 console.log('`About` component loaded asynchronously');
 
 @Component({
-  selector: 'edit',
+  selector: 'search',
   styles: [`
   `],
   template: `
     <!--EDIT PAGE-->
     <div class="container">
-    <h3>Edycja profilu</h3>
+    <h3>Szukaj Przejazdu</h3>
   <form>
     <div class="form-group row">
-      <label for="numerTelefonu" class="col-sm-2 col-form-label">Numer telefonu</label>
+      <label for="numerTelefonu" class="col-sm-2 col-form-label">Skąd</label>
       <div class="col-sm-10">
         <input type="number" class="form-control" id="numerTelefonu" placeholder="Podaj swój numer telefonu">
       </div>
     </div>
     <div class="form-group row">
-      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <label for="email" class="col-sm-2 col-form-label">Czas dojazdu</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="email" placeholder="Podaj swój adres email">
+        <input class="form-control" type="time" value="08:30:00" step="1800">
       </div>
     </div>
     <div class="form-group row">
@@ -47,7 +47,7 @@ console.log('`About` component loaded asynchronously');
     
   `
 })
-export class EditComponent {
+export class SearchComponent {
   localState: any;
   constructor(public route: ActivatedRoute) {
 

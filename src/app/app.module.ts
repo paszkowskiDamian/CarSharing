@@ -16,6 +16,7 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
+import {SearchComponent} from  './search'
 import { NewsComponent }  from './news';
 import {EditComponent} from './edit';
 import { NoContentComponent } from './no-content';
@@ -46,6 +47,7 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     EditComponent,
+    SearchComponent,
     NewsComponent,
     NoContentComponent,
     XLarge
