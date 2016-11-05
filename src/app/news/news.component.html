@@ -7,18 +7,18 @@
     <!--</div>-->
   <!--</div>-->
   <div class="card col-md-6">
-  
+
       <sebm-google-map [latitude]="(srcLat + dstLat) / 2" [longitude]="(srcLng + dstLng) / 2" [zoom]="10" >
             <sebm-google-map-marker [latitude]="srcLat" [longitude]="srcLng"></sebm-google-map-marker>
             <sebm-google-map-marker [latitude]="dstLat" [longitude]="dstLng"></sebm-google-map-marker>
       </sebm-google-map>
 <div class="card-block">
-    
+
     <div class="row">
         <div class="col-sm-3" id="driverImage">
         </div>
         <div class="col-sm-3 driverInfo" >
-            {{driverName}}
+            <p class="driverName">{{driverName}}</p>
         </div>
     </div>
     <div class="row">

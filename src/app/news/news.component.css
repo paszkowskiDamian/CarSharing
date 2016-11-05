@@ -8,10 +8,11 @@
   width: 60px;
   border-radius: 50%;
   margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .driverInfo {
-  
+
   box-sizing: border-box;
   padding: 10px;
   margin: 10px;

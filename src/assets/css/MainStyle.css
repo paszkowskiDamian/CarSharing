@@ -66,6 +66,12 @@ nav {
   padding-bottom: 5px;
 }
 
+.driverName{
+  padding-top: 15px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
 .keep {
   position: relative;
   top: 10px;
