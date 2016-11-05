@@ -12,7 +12,7 @@
             <sebm-google-map-marker [latitude]="srcLat" [longitude]="srcLng"></sebm-google-map-marker>
             <sebm-google-map-marker [latitude]="dstLat" [longitude]="dstLng"></sebm-google-map-marker>
       </sebm-google-map>
-
+<div class="row">
   <div class="card-block">
     <div class="col-sm-3" id="userImage">
     
@@ -20,29 +20,40 @@
     <div class="userName">
         <p>Imię Nazwisko</p>
     </div>
+</div>
 
-  <div class="card-block">
-        <div class="row">
-            <div class="col-sm-5">
-                {{startAddress}}
-            </div>
-            <div class="col-sm-2">
-                <strong>→</strong>
-            </div>
-            <div class="col-sm-5">
-                {{destAddress}}
-            </div>
-        </div>
-        <h4>Czas przyjazdu</h4>
-        <div class="row">
+<div class="card-block">
+    <div class="row">
              <div class="col-sm-3">
                 {{weekDay}}
             </div>
             <div class="col-sm-6">
                 {{date}}
             </div>
-            <div class="col-sm-3">
-                {{time}}
+        </div>
+
+        <div class="row">
+            <div class="col-sm-5">
+                <h4>
+                {{startAddress}}
+                </h4>
+            </div>
+            <div class="col-sm-2">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+            <div class="col-sm-5">
+                 <h4>
+                {{destAddress}}
+                </h4>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6">
+                {{srcTime}}
+            </div>
+            <div class="col-sm-6">
+                {{dstTime}}
             </div>
         </div>
 
