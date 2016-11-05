@@ -70,13 +70,13 @@ console.log('register` component loaded asynchronously');
     <div class="form-group row">
       <label for="passwordVeryfication" class="col-sm-2 col-form-label" >Powtórz hasło</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" required [(ngModel)]="model.userName" name="passwordVeryfication" id="passwordVeryfication" placeholder="Zweryfikuj swoje hasło">
+        <input type="password" class="form-control" required [(ngModel)]="model.passwordCheck" name="passwordVeryfication" id="passwordVeryfication" placeholder="Zweryfikuj swoje hasło">
       </div>
     </div>
     
     <div class="form-group row">
       <div class="offset-xs-2 col-xs-2 ">
-        <button type="button" class="btn btn-primary ">Załóż konto</button>
+        <button type="button" class="btn btn-primary " (click)="registerUser()">Załóż konto</button>
       </div>
       <div class=" col-xs-8 ">
         <button type="button" style="float: right" class="btn btn-primary " (click)="loginUserPage()">Login</button>
@@ -100,6 +100,20 @@ export class RegisterComponent {
   loginUserPage() {
     this._router.navigate([('/login')]);
   }
+
+  registerUser() {
+    if(this.model.selfie.length == 0)
+    {
+      this.model.selfie = 'http://www.catsinsinks.com/cats/rotator.php';
+    }
+    if(this.model.password != this.model.passwordCheck)
+    {
+      
+    }
+
+
+  }
+
 
   ngOnInit() {
     this.route
@@ -138,6 +152,7 @@ export class registerModel {
   firstName : string;
   lastName : string;
   password : string;
+  passwordCheck: string;
   email: string;
   phoneNumber: string;
   selfie: string;

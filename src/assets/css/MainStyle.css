@@ -6,14 +6,7 @@
     margin-left: 25%;
   }
 
-  #buttons {
-    margin: 0;
-    padding: 0;
-    display: block;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-  }
+
 
   #buttons > * {
     height: 60px;
@@ -24,6 +17,16 @@
     background-color: rgba(167, 190, 255, 1);
   }
 }
+
+#buttons {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
 body {
   background-color: rgba(244, 244, 244, 1);
   overflow-x:hidden;
@@ -48,7 +51,7 @@ nav {
 
 #userImage {
   /*background-color: #3e82ff;*/
-  background-image: url("http://24.media.tumblr.com/tumblr_lnpkwzi76B1qlzxejo1_250.gif") ;
+  background-image: url("http://www.catsinsinks.com/cats/rotator.php") ;
   background-position: center;
   background-size: cover;
   height: 60px;
