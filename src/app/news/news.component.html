@@ -12,52 +12,43 @@
             <sebm-google-map-marker [latitude]="srcLat" [longitude]="srcLng"></sebm-google-map-marker>
             <sebm-google-map-marker [latitude]="dstLat" [longitude]="dstLng"></sebm-google-map-marker>
       </sebm-google-map>
-<div class="row">
-  <div class="card-block">
-    <div class="col-sm-3" id="userImage">
-    
-    </div>
-    <div class="userName">
-        <p>Imię Nazwisko</p>
-    </div>
-</div>
-
 <div class="card-block">
+    
     <div class="row">
-             <div class="col-sm-3">
-                {{weekDay}}
-            </div>
-            <div class="col-sm-6">
-                {{date}}
-            </div>
+        <div class="col-sm-3" id="driverImage">
         </div>
+        <div class="col-sm-3 driverInfo" >
+            {{driverName}}
+        </div>
+    </div>
+    <div class="row">
+            {{weekDay}} <strong>{{date}}</strong>
+    </div>
 
-        <div class="row">
-            <div class="col-sm-5">
-                <h4>
-                {{startAddress}}
-                </h4>
-            </div>
-            <div class="col-sm-2">
+    <div class="row">
+        <div class="col-sm-5">
+            <h4>
+            {{startAddress}}
+            </h4>
+            <p>
+            {{srcTime}}
+            </p>
+        </div>
+        <div class="col-sm-2">
+            <div class="arrow">
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </div>
-            <div class="col-sm-5">
-                 <h4>
-                {{destAddress}}
-                </h4>
-            </div>
         </div>
-        
-        <div class="row">
-            <div class="col-sm-6">
-                {{srcTime}}
-            </div>
-            <div class="col-sm-6">
-                {{dstTime}}
-            </div>
+        <div class="col-sm-5">
+            <h4>
+            {{destAddress}}
+            </h4>
+            <p>
+            {{dstTime}}
+            </p>
         </div>
-
     </div>
+
     <a href="#" class="btn btn-primary">Kontakt</a>
     <a href="#" class="btn btn-primary">Shotgun</a>
   </div>

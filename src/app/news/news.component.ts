@@ -15,8 +15,7 @@ console.log('`News` component loaded asynchronously');
 
 @Component({
   selector: 'news',
-  styles: [`
-  `],
+  styleUrls: [ 'news.component.css' ],
   
   templateUrl: './news.component.html'
   
@@ -24,6 +23,7 @@ console.log('`News` component loaded asynchronously');
 export class NewsComponent {
   localState: any;
 
+  driverName = "Jan Peszek"
   srcLat = 50.261665;
   srcLng = 19.021583;
   dstLat = 50.290806;
