@@ -18,26 +18,41 @@ console.log('`About` component loaded asynchronously');
     <h3>Szukaj Przejazdu</h3>
   <form>
     <div class="form-group row">
-      <label for="numerTelefonu" class="col-sm-2 col-form-label">Skąd</label>
+      <label for="fromWhere" class="col-sm-2 col-form-label">Skąd</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" id="numerTelefonu" placeholder="Podaj swój numer telefonu">
+        <input type="text" class="form-control" id="fromWhere" placeholder="Podaj skąd chcesz jechać">
       </div>
     </div>
     <div class="form-group row">
-      <label for="email" class="col-sm-2 col-form-label">Czas dojazdu</label>
+      <label for="whereTo" class="col-sm-2 col-form-label">Dokąd</label>
       <div class="col-sm-10">
-        <input class="form-control" type="time" value="08:30:00" step="1800">
+        <div class="btn-group">
+  <button type="button" id="whereTo" class="btn dropdown-toggle form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Wybierz biuro
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="">EUVIC Gliwice</a>
+    <a class="dropdown-item" href="">EUVIC Rybnik</a>
+    <a class="dropdown-item" href="">EUVIC Hawaje</a>
+  </div>
+</div>
       </div>
     </div>
     <div class="form-group row">
-      <label for="imgURL" class="col-sm-2 col-form-label">Selfie URL</label>
+      <label for="whenDate" class="col-sm-2 col-form-label">Data</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="imgURL" placeholder="Podaj link do twojego selfie">
+        <input class="form-control" id="whenDate" type="date" placeholder="Wybierz datę wyjazdu">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="whenTime" class="col-sm-2 col-form-label">Godzina</label>
+      <div class="col-sm-10">
+        <input type="time" value="07:30" step="1800" class="form-control" id="whenTime" placeholder="Podaj godzinę dojazdu do biura">
       </div>
     </div>
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Wyślij</button>
+        <button type="submit" class="btn btn-primary">Szukaj</button>
       </div>
     </div>
   </form>
