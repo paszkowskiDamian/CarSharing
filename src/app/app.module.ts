@@ -16,9 +16,13 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
+import { NewsComponent }  from './news';
 import {EditComponent} from './edit';
 import { NoContentComponent } from './no-content';
 import { XLarge } from './home/x-large';
+
+
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -42,6 +46,7 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     EditComponent,
+    NewsComponent,
     NoContentComponent,
     XLarge
   ],
@@ -49,6 +54,9 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAulrJ-ryUQG3-A10oKWy3PoFLddY_03WM'
+    }),
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
