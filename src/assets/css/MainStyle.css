@@ -54,6 +54,12 @@ nav {
   margin-top: 20px;
 }
 
+.searchBtn {
+  box-sizing: border-box;
+  padding-top: 12px;
+  text-align: center;
+}
+
 .userPanel {
   margin-top: 5px;
 }

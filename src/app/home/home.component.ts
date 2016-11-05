@@ -36,4 +36,6 @@ export class HomeComponent {
     this.appState.set('value', value);
     this.localState.value = '';
   }
+  
+  
 }
