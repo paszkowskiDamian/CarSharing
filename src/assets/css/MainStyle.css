@@ -66,6 +66,11 @@ nav {
   padding-bottom: 5px;
 }
 
+.keep {
+  position: relative;
+  top: 10px;
+}
+
 .userPanel {
   margin-top: 5px;
 }

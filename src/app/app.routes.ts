@@ -5,8 +5,9 @@ import { SearchComponent } from './search';
 import { NoContentComponent } from './no-content';
 import {EditComponent} from './edit'
 import {AddComponent} from './add'
-
+import {LoginComponent} from "./login";
 import { DataResolver } from './app.resolver';
+
 
 
 export const ROUTES: Routes = [
@@ -15,6 +16,7 @@ export const ROUTES: Routes = [
   { path: 'about', component: AboutComponent },
   {path: 'edit',   component: EditComponent},
   {path: 'add',     component: AddComponent},
+  {path: 'login',   component: LoginComponent},
   {path: 'search', component: SearchComponent},
   {
     path: 'detail', loadChildren: () => System.import('./+detail').then((comp: any) => {

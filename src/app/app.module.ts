@@ -18,6 +18,7 @@ import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import {SearchComponent} from  './search';
 import {AddComponent} from './add';
+import {LoginComponent} from './login';
 import { NewsComponent }  from './news';
 import {EditComponent} from './edit';
 import { NoContentComponent } from './no-content';
@@ -47,6 +48,7 @@ type StoreType = {
     AppComponent,
     AboutComponent,
     HomeComponent,
+    LoginComponent,
     EditComponent,
     AddComponent,
     SearchComponent,
