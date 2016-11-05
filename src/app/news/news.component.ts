@@ -16,9 +16,9 @@ console.log('`News` component loaded asynchronously');
 @Component({
   selector: 'news',
   styleUrls: [ 'news.component.css' ],
-  
+
   templateUrl: './news.component.html'
-  
+
 })
 export class NewsComponent {
   localState: any;
@@ -31,7 +31,7 @@ export class NewsComponent {
   startAddress = "Katowice al. Korfantego 2";
   destAddress = "Biuro Gliwice Sośnica";
   weekDay = "pon";
-  date= "2016/10/07";
+  date= "2016-10-07";
   srcTime =  "7:45";
   dstTime = "8:30";
   constructor(public route: ActivatedRoute) {

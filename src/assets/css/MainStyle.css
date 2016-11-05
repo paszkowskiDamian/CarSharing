@@ -47,7 +47,10 @@ nav {
 }
 
 #userImage {
-  background-color: #3e82ff;
+  /*background-color: #3e82ff;*/
+  background-image: url("http://24.media.tumblr.com/tumblr_lnpkwzi76B1qlzxejo1_250.gif") ;
+  background-position: center;
+  background-size: cover;
   height: 60px;
   width: 60px;
   border-radius: 50%;

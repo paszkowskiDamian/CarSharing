@@ -42,8 +42,8 @@ console.log('login` component loaded asynchronously');
       <div class="offset-xs-2 col-xs-2 ">
         <button type="button" class="btn btn-primary " (click)="getLogin()">Login</button>
       </div>
-      <div class=" col-xs-1 ">
-        <button type="button" class="btn btn-primary" (click)="registerAccountPage()">Załóż konto</button>
+      <div class=" col-xs-8 ">
+        <button type="button" style="float: right" class="btn btn-primary" (click)="registerAccountPage()">Załóż konto</button>
       </div>
     </div>
   </form>

@@ -21,49 +21,56 @@ console.log('register` component loaded asynchronously');
     <div class="form-group row">
       <label for="login" class="col-sm-2 col-form-label">Login</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="login" id="login" placeholder="Podaj swój login">
+        <input type="text" class="form-control" required [(ngModel)]="model.userName" name="login" id="login" placeholder="Podaj swój login">
       </div>
     </div>
     
     <div class="form-group row">
       <label for="firstName" class="col-sm-2 col-form-label" >Imię</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Podaj swoje imię">
+        <input type="text" class="form-control" required [(ngModel)]="model.firstName" name="firstName" id="firstName" placeholder="Podaj swoje imię">
       </div>
     </div>
     
     <div class="form-group row">
       <label for="lastName" class="col-sm-2 col-form-label" >Nazwisko</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Podaj swoje nazwisko">
+        <input type="text" class="form-control" required [(ngModel)]="model.lastName" name="lastName" id="lastName" placeholder="Podaj swoje nazwisko">
       </div>
     </div>
     
     <div class="form-group row">
       <label for="email" class="col-sm-2 col-form-label" >Email</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" name="email" id="email" placeholder="Podaj swój emial">
+        <input type="email" class="form-control" required [(ngModel)]="model.email" name="email" id="email" placeholder="Podaj swój emial">
       </div>
     </div>
     
     <div class="form-group row">
       <label for="phoneNumber" class="col-sm-2 col-form-label" >Numer Telefonu</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Podaj swój numer telefonu">
+        <input type="tel" class="form-control" required [(ngModel)]="model.phoneNumber" name="phoneNumber" id="phoneNumber" placeholder="Podaj swój numer telefonu">
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="selfie" class="col-sm-2 col-form-label" >Selfie URL</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="model.selfie" name="selfie" id="selfie" placeholder="Podaj swój numer telefonu">
       </div>
     </div>
     
     <div class="form-group row">
       <label for="password" class="col-sm-2 col-form-label" >Hasło</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" name="password" id="password" placeholder="Podaj hasło">
+        <input type="password" class="form-control" required [(ngModel)]="model.password" name="password" id="password" placeholder="Podaj hasło">
       </div>
     </div>
     
     <div class="form-group row">
       <label for="passwordVeryfication" class="col-sm-2 col-form-label" >Powtórz hasło</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" name="passwordVeryfication" id="passwordVeryfication" placeholder="Zweryfikuj swoje hasło">
+        <input type="password" class="form-control" required [(ngModel)]="model.userName" name="passwordVeryfication" id="passwordVeryfication" placeholder="Zweryfikuj swoje hasło">
       </div>
     </div>
     
@@ -71,8 +78,8 @@ console.log('register` component loaded asynchronously');
       <div class="offset-xs-2 col-xs-2 ">
         <button type="button" class="btn btn-primary ">Załóż konto</button>
       </div>
-      <div class=" col-xs-1 ">
-        <button type="button" class="btn btn-primary " (click)="loginUserPage()">Login</button>
+      <div class=" col-xs-8 ">
+        <button type="button" style="float: right" class="btn btn-primary " (click)="loginUserPage()">Login</button>
       </div>
     </div>
   </form>
@@ -87,6 +94,8 @@ export class RegisterComponent {
   localState: any;
   constructor(public route: ActivatedRoute, private _http : HttpService, private _router : Router){
   }
+
+  model : registerModel = new registerModel();
 
   loginUserPage() {
     this._router.navigate([('/login')]);
@@ -131,4 +140,5 @@ export class registerModel {
   password : string;
   email: string;
   phoneNumber: string;
+  selfie: string;
 }

@@ -58,7 +58,7 @@ export class AppComponent {
   name = 'Angular 2 Webpack Starter';
   url = 'https://twitter.com/AngularClass';
 
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   constructor(
     public appState: AppState) {
