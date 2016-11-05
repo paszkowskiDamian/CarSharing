@@ -22,7 +22,7 @@ import { AppState } from './app.service';
         <div class="col-sm-6">
           <a [routerLink]="['./home']"><img src="./assets/images/logo-100px.png" id="logo"></a>
         </div>
-        <div class="col-sm-6 userPanel">
+        <div *ngIf="isLoggedIn === true" class="col-sm-6 userPanel">
           <div id="userImage">
             
           </div>
@@ -57,6 +57,8 @@ export class AppComponent {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
   name = 'Angular 2 Webpack Starter';
   url = 'https://twitter.com/AngularClass';
+
+  isLoggedIn = false;
 
   constructor(
     public appState: AppState) {

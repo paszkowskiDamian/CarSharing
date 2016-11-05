@@ -19,6 +19,7 @@ import { AboutComponent } from './about';
 import {SearchComponent} from  './search';
 import {AddComponent} from './add';
 import {LoginComponent} from './login';
+import {RegisterComponent} from './register'; 
 import { NewsComponent }  from './news';
 import {EditComponent} from './edit';
 import { NoContentComponent } from './no-content';
@@ -49,6 +50,7 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     LoginComponent,
+    RegisterComponent,
     EditComponent,
     AddComponent,
     SearchComponent,

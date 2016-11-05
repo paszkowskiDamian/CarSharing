@@ -1,49 +1,47 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {  HttpService } from ''
-
 /*
  * We're loading this component asynchronously
  * We are using some magic with es6-promise-loader that will wrap the module with a Promise
  * see https://github.com/gdi2290/es6-promise-loader for more info
  */
 
-console.log('login` component loaded asynchronously');
+console.log('register` component loaded asynchronously');
 
 @Component({
-  selector: 'login',
+  selector: 'register',
   styles: [`
   `],
   template: `
     <!--EDIT PAGE-->
     <div class="container">
-    <h3>Login</h3>
+    <h3>Zarejestruj się</h3>
   <form>
     <div class="form-group row">
       <label for="login" class="col-sm-2 col-form-label">Login</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="model.userName" name="login" placeholder="Podaj swój login">
+        <input type="text" class="form-control" id="login" placeholder="Podaj swój login">
       </div>
     </div>
     <div class="form-group row">
-      <label for="password" class="col-sm-2 col-form-label"  >Password</label>
+      <label for="password" class="col-sm-2 col-form-label">Password</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" [(ngModel)]="model.password" name="password" id="password" placeholder="Podaj hasło">
+        <input type="password" class="form-control" id="login" placeholder="Podaj hasło">
       </div>
     </div>
       <div class="form-group row">
       <label for="keeplogin" class="col-sm-2 col-form-label">Zapamiętaj</label>
       <div class="col-sm-1">
-      <input type="checkbox" class="form-control keep" id="keeplogin" placeholder="keep" >
+      <input type="checkbox" class="form-control keep" id="keeplogin" placeholder="keep">
 </div>
 </div>
     
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-1 ">
-        <button type="button" class="btn btn-primary " (click)="getLogin()">Login</button>
+        <button type="submit" class="btn btn-primary ">Login</button>
       </div>
       <div class=" col-sm-1 ">
-        <button type="button" class="btn btn-primary ">Załóż konto</button>
+        <button type="submit" class="btn btn-primary ">Załóż konto</button>
       </div>
     </div>
   </form>
@@ -53,17 +51,10 @@ console.log('login` component loaded asynchronously');
     
   `
 })
-export class LoginComponent {
+export class RegisterComponent {
   localState: any;
   constructor(public route: ActivatedRoute) {
 
-  }
-
-  model : loginModel = new loginModel();
-
-  getLogin() {
-    console.log(this.model.userName);
-    console.log(this.model.password);
   }
 
   ngOnInit() {
@@ -96,9 +87,4 @@ export class LoginComponent {
     });
   }
 
-}
-
-export class loginModel {
-  userName : String;
-  password : String;
 }
