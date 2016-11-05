@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import { HttpService } from  'app/http.service'
+import { HttpService } from  'app/http.service';
+import { registerModel } from 'app/userInfo';
+import {LockerModule, Locker, LockerConfig} from 'angular2-locker'
+
 
 /*
  * We're loading this component asynchronously
@@ -52,11 +55,11 @@ console.log('login` component loaded asynchronously');
     
     
   `,
-  providers: [HttpService]
+  providers: [HttpService, registerModel]
 })
 export class LoginComponent {
   localState: any;
-  constructor(public route: ActivatedRoute, private _http : HttpService, private _router : Router) {
+  constructor(public route: ActivatedRoute, private _http : HttpService, private _router : Router, public userInfo : registerModel, public storage : Locker) {
 
   }
 
@@ -68,7 +71,12 @@ export class LoginComponent {
 
 
    getLogin() {
-     console.log(this._http.post("http://carshareapp.azurewebsites.net/api/user/login",this.model));
+     this._http.post("http://carshare2016.azurewebsites.net/api/user/login",this.model).then(function (response) {
+       //this._router.navigate(['/home'])
+       var name = response.firstName;
+       console.log(name);
+       this.storage.set('firstName',name);
+     }
    }
 
   ngOnInit() {

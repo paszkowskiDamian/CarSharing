@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import { HttpService } from  'app/http.service';
+import { registerModel } from 'app/userInfo';
 /*
  * We're loading this component asynchronously
  * We are using some magic with es6-promise-loader that will wrap the module with a Promise
@@ -88,7 +89,7 @@ console.log('register` component loaded asynchronously');
     
     
   `,
-  providers: [HttpService]
+  providers: [HttpService,registerModel]
 })
 export class RegisterComponent {
   localState: any;
@@ -106,12 +107,12 @@ export class RegisterComponent {
     {
       this.model.selfie = 'http://www.catsinsinks.com/cats/rotator.php';
     }
-    if(this.model.password != this.model.passwordCheck)
+    if(this.model.password == this.model.passwordCheck)
     {
-      
+      this._http.post('http://carshare2016.azurewebsites.net/api/user/register',this.model);
+    }else{
+      console.log("error");
     }
-
-
   }
 
 
@@ -147,13 +148,3 @@ export class RegisterComponent {
 
 }
 
-export class registerModel {
-  userName : string;
-  firstName : string;
-  lastName : string;
-  password : string;
-  passwordCheck: string;
-  email: string;
-  phoneNumber: string;
-  selfie: string;
-}

@@ -19,13 +19,13 @@ import { AboutComponent } from './about';
 import {SearchComponent} from  './search';
 import {AddComponent} from './add';
 import {LoginComponent} from './login';
-import {RegisterComponent} from './register'; 
+import {RegisterComponent} from './register';
 import { NewsComponent }  from './news';
 import { TopDriverComponent } from './top-driver';
 import {EditComponent} from './edit';
 import { NoContentComponent } from './no-content';
 import { XLarge } from './home/x-large';
-
+import {LockerModule, Locker, LockerConfig} from 'angular2-locker';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
@@ -61,6 +61,7 @@ type StoreType = {
     XLarge
   ],
   imports: [ // import Angular's modules
+    LockerModule,
     BrowserModule,
     FormsModule,
     HttpModule,
