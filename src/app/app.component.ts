@@ -44,7 +44,7 @@ import { AppState } from './app.service';
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <img src="./assets/images/logo-100px.png" id="logo">
+          <a [routerLink]="['./home']"><img src="./assets/images/logo-100px.png" id="logo"></a>
         </div>
         <div class="col-sm-6 userPanel">
           <div id="userImage">

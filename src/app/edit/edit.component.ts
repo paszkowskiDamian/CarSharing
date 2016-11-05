@@ -13,17 +13,22 @@ console.log('`About` component loaded asynchronously');
   styles: [`
   `],
   template: `
-    <h1>About</h1>
-    <div>
-      For hot module reloading run
-      <pre>npm run start:hmr</pre>
+    <!--EDIT PAGE-->
+    <div class="container">
+    <form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Numer Telefonu:</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="+48 618 989 54">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Another label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </div>
+</form>
     </div>
-    <div>
-      <h3>
-        patrick@AngularClass.com
-      </h3>
-    </div>
-    <pre>this.localState = {{ localState | json }}</pre>
+    
+    
+    
   `
 })
 export class EditComponent {
