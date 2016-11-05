@@ -1,3 +1,55 @@
 .sebm-google-map-container {
   height: 300px;
 }
+
+#driverImage {
+  background-color: #3e82ff;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 0px;
+}
+
+.driverInfo {
+  
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.row {
+  margin: 0px;
+  padding: 0px;
+}
+
+.row > * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.card-block {
+  padding: 15px;
+  margin-top:0px;
+}
+
+.card {
+  padding: 20px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.arrow {
+  background-color: #3e82ff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  align-content: center;
+}
+
+.arrow > * {
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  align-content: center;
+}
